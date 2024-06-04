@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 
-public class AppTest {
+public class ProgramTest {
     private Game game;
     private Player player1, player2;
     private TicTacToeCell cell;
