@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
 public class AppTest {
@@ -23,7 +21,6 @@ public class AppTest {
         cell = new TicTacToeCell(0, 0, 0);
     }
 
-    // Tests for Game class
     @Test
     public void testCheckStatePlaying() {
         assertEquals(State.PLAYING, game.checkState(game.board));
@@ -32,14 +29,14 @@ public class AppTest {
     @Test
     public void testCheckStateXWin() {
         game.board = new char[] {'X', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' '};
-        game.symbol = 'X';  // Добавляем символ для проверки
+        game.symbol = 'X';
         assertEquals(State.XWIN, game.checkState(game.board));
     }
 
     @Test
     public void testCheckStateOWin() {
         game.board = new char[] {'O', 'O', 'O', ' ', ' ', ' ', ' ', ' ', ' '};
-        game.symbol = 'O';  // Добавляем символ для проверки
+        game.symbol = 'O';
         assertEquals(State.OWIN, game.checkState(game.board));
     }
 
@@ -74,7 +71,6 @@ public class AppTest {
         assertTrue(game.MaxMove(game.board, player2) >= -Game.INF);
     }
 
-    // Tests for Player class
     @Test
     public void testPlayerInitialization() {
         assertNotNull(player1);
@@ -82,7 +78,6 @@ public class AppTest {
         assertFalse(player1.win);
     }
 
-    // Tests for TicTacToeCell class
     @Test
     public void testInitialMarker() {
         assertEquals(' ', cell.getMarker());
